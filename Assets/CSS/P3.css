@@ -1,0 +1,91 @@
+*{
+    font-family: Vazir-Bold;
+}
+body{
+    margin: 0;
+    background-color: rgb(41, 179, 179);
+}
+label{
+    position: absolute;
+    z-index: 1;
+}
+input#test{
+    display: none;
+}
+input#test:checked ~ label{
+    right: 0;
+}
+svg.burger g, svg.close g{
+    stroke: blanchedalmond;
+    transition: all .4s ease;
+}
+svg.burger g:hover, svg.close g:hover{
+    stroke: rgb(158, 152, 152);
+    cursor: pointer;
+}
+svg.close, svg.burger{
+    top: 24px;
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+}
+svg.burger{
+    opacity: 1;
+}
+svg.close line{
+    transform-origin: 0%;
+}
+svg.close g{
+    transform: rotate(45deg);
+    transform-origin: 50%;
+}
+input#test:checked ~ label .burger{
+    opacity: 0;
+}
+input#test:checked ~ label .close{
+    opacity: 1;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(212, 74, 49);
+    transition: all 1s ease-in-out;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    opacity: 0;
+}
+.menu div{
+    transition: all 1s ease-in-out;
+    margin-top: 50px;
+}
+.main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+input#test:checked ~ .menu div{
+    margin-top: 0;
+}
+.main span{
+    margin: auto;
+    font-size: 40px;
+    color: white;
+}
+input#test:checked ~ .menu{
+    opacity: 1;
+}
+.menu ul li{
+    list-style: none;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}

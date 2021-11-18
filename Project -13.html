@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link rel="stylesheet" href="assets/css/hover.css">
+    <link rel="stylesheet" href="assets/css/imagehover.css">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Assets/CSS/P13.css">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <style>
+      body{
+        direction: rtl;
+      }
+      figure img{
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .container{
+        margin-top: 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .card{
+        max-width: 300px;
+        border: 2px solid steelblue;
+        padding: 20px;
+      }
+      a{
+        text-decoration: none;
+      }
+      [class^='imghvr-'],
+[class*=' imghvr-'] {
+  background-color: #835b56;
+}
+[class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption{
+  background-color: tomato;
+}
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <figure class="imghvr-flip-vert">
+        <img src="Assets/img/Snapetaghforela.jpg">
+        <figcaption>
+            پشت اینجا چیزی نیست
+        </figcaption>
+      </figure>
+      <a href="#">استغفرالله</a>
+      <p>مطالب خاک بر سری</p>
+    </div>
+    <div class="card">
+      <figure class="imghvr-shutter-in-out-horiz">
+        <img src="Assets/img/8569_205349066321143_2014233965_n.jpg">
+        <figcaption>
+            هق هق هق
+        </figcaption>
+      </figure>
+      <a href="#">هق</a>
+      <p>در این جلسه هق هق میکنیم</p>
+    </div>
+    <div class="card">
+      <figure class="imghvr-fold-right">
+        <img src="Assets/img/10378939_396598457145218_8492584452381238172_n.jpg">
+        <figcaption>
+            شینرا تنسییییییی 
+        </figcaption>
+      </figure>
+      <a href="#">ایتامی</a>
+      <p>در این جلسه شینرا تنسی میزنیم</p>
+    </div>
+  </div>
+</body>
+</html>

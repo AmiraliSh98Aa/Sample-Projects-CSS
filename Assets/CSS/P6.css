@@ -1,0 +1,109 @@
+.course-title{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 36px;
+    padding: 120px;
+}
+body{
+    background-color: rgb(173, 194, 173);
+    height: 100%;
+    color: rgba(0,0,0,0.75);
+}
+ul li{
+    list-style: none;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.btn{
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 250px;
+    background-color: rgb(81, 44, 116);
+    border: 0;
+    border-radius: 7px;
+    padding: 16px 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    /* overflow: hidden; */
+    position: relative;
+}
+.btn i{
+    border-radius: 100%;
+    animation: ripple .7s linear infinite;
+}
+@keyframes ripple{
+    0%{
+        box-shadow: 0 0 0 0 rgba(255,255,255,.1), 0 0 0 20px rgba(255,255,255,.1), 0 0 0 40px rgba(255,255,255,0), 0 0 0 60px rgba(255,255,255,.1);
+    }
+    100%{
+        box-shadow: 0 0 0 20px rgba(255,255,255,.1), 0 0 0 40px rgba(255,255,255,.1), 0 0 0 60px rgba(255,255,255,0), 0 0 0 80px rgba(255,255,255,.1);
+
+    }
+}
+ul.dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(231, 227, 227);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    transition: 1s ease-in-out;
+    padding: 0;         
+    text-align: right;   
+    opacity: 0;
+}
+ul.dropdown::before{
+    content: '';
+    width: 0;
+    height: 0;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    position: absolute;
+    /* background-color: saddlebrown; */
+    top: -5px;
+    left: 12px;
+    border-top: 6px solid rgb(231, 227, 227);
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+    border-right: 6px solid rgb(231, 227, 227);
+    transform: rotate(-45deg);
+}
+ul.dropdown li{
+    position: relative;
+    padding: 0 15px;
+    color: rgb(122, 50, 50);
+}
+ul.dropdown li .active{
+    color: rgb(97, 97, 184);
+}
+ul.dropdown li:first-child{
+    border-radius: 5px 5px 0 0;
+}
+ul.dropdown li:last-child{
+    border-radius: 0 0 5px 5px;
+}
+ul.dropdown li:last-child a{
+    border-bottom: 0;
+}
+ul.dropdown li a{
+    display: block;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.075);
+    padding: 16px 0;
+    font-size: 18px;
+    text-decoration: none;
+}
+.btn:focus ul.dropdown,.btn:active ul.dropdown{
+    opacity: 1;
+}
+.btn:focus ul.dropdown,.btn:active ul.dropdown{
+    transform: translateY(20px);
+}

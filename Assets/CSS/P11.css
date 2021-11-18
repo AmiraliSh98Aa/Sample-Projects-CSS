@@ -1,0 +1,27 @@
+body{
+    direction: rtl;
+}
+a{
+    text-decoration: none;
+}
+.card{
+    width: 300px;
+    margin-top: 250px;
+    border: 2px solid rgb(14, 104, 59);
+    box-shadow: 0 0 15px rgba(20, 20, 20, 0.5);
+    padding: 12px;
+}
+.card img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.card a{
+    margin: 15px 0;
+    display: block;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

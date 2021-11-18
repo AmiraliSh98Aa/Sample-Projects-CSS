@@ -1,0 +1,94 @@
+.course-title {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    padding: 100px;
+    font-size: 34px;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  body{
+      background-color: #9c956e;
+  }
+  .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .main-menu {
+      width: 250px;
+      display: block;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: right;
+  }
+  .item {
+      border-top: 1px solid #ef542a;
+  }
+  .btn {
+      display: block;
+      padding: 10px 15px;
+      background-color: #d85b4f;
+      color: #fff;
+      position: relative;
+  }
+  .sub-menu {
+      background-color: #1e2d6e;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .7s ease;
+  }
+  .sub-menu a{
+      display: block;
+      padding: 10px 15px;
+      color: #fff;
+      font-size: 20px;
+      border-bottom: 2px solid #2b3669;
+      position: relative;
+  }
+  .sub-menu a::before{
+      content: '';
+      opacity: 0;
+      transition: opacity .5s ease-in-out;
+  }
+  .sub-menu a:hover::before{
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 6px;
+      left: 0;
+      top: 0;
+      opacity: 1;
+      border-top: 24px solid transparent;
+      border-left: 11px solid #9c956e;
+      border-bottom: 24px solid transparent;
+  }
+  .sub-menu a::after{
+      content: '';
+      opacity: 0;
+      transition: opacity .5s ease-in-out;
+  }
+  .sub-menu a:hover::after{
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 6px;
+      right: 0;
+      top: 0;
+      opacity: 1;
+      border-top: 24px solid transparent;
+      border-right: 11px solid #9c956e;
+      border-bottom: 24px solid transparent;
+  }
+  .sub-menu a:hover{
+      background: #273057;
+      background: linear-gradient(to bottom, #273057 0%, #273057 50%, #3a4574 51%);
+  }
+  .item:target .sub-menu{
+      max-height: 200px;
+  }
